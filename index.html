@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Energía</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Logo Bamesa Consulting.png" alt="Bamesa Consulting" class="logo">
+            <h1>CALCULADORA COMISIONES</h1>
+            <img src="logo.png" alt="Energya VM" class="logo-vm">
+        </header>
+
+        <form id="energiaForm">
+            <!-- Tarifa de Acceso -->
+            <div class="form-group">
+                <label for="tarifaAcceso">Tarifa de Acceso:</label>
+                <select id="tarifaAcceso">
+                    <option value="2.0TD" selected>2.0TD</option>
+                    <option value="3.0TD">3.0TD</option>
+                    <option value="6.1TD">6.1TD</option>
+                </select>
+            </div>
+
+            <!-- Producto -->
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <select id="producto">
+                    <option value="FIJO" selected>FIJO</option>
+                    <option value="INDEXADO">INDEXADO</option>
+                </select>
+            </div>
+
+            <!-- Consumo Anual (kWh) -->
+            <h2>Consumo Anual (kWh)</h2>
+            <div class="form-group">
+                <input type="number" id="p1" placeholder="P1 (kWh)" required>
+                <input type="number" id="p2" placeholder="P2 (kWh)" required>
+                <input type="number" id="p3" placeholder="P3 (kWh)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="p4" placeholder="P4 (kWh)" required>
+                <input type="number" id="p5" placeholder="P5 (kWh)" required>
+                <input type="number" id="p6" placeholder="P6 (kWh)" required>
+            </div>
+
+            <!-- Potencia Contratada (kW) -->
+            <h2>Potencia Contratada (kW)</h2>
+            <div class="form-group">
+                <input type="number" id="potenciaP1" placeholder="P1 (kW)" required>
+                <input type="number" id="potenciaP2" placeholder="P2 (kW)" required>
+                <input type="number" id="potenciaP3" placeholder="P3 (kW)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="potenciaP4" placeholder="P4 (kW)" required>
+                <input type="number" id="potenciaP5" placeholder="P5 (kW)" required>
+                <input type="number" id="potenciaP6" placeholder="P6 (kW)" required>
+            </div>
+
+            <!-- Fee Energía -->
+            <h2>Fee Energía (€/MWh)</h2>
+            <div class="form-group">
+                <input type="number" id="feeP1" placeholder="P1 (€/MWh)" required>
+                <input type="number" id="feeP2" placeholder="P2 (€/MWh)" required>
+                <input type="number" id="feeP3" placeholder="P3 (€/MWh)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="feeP4" placeholder="P4 (€/MWh)" required>
+                <input type="number" id="feeP5" placeholder="P5 (€/MWh)" required>
+                <input type="number" id="feeP6" placeholder="P6 (€/MWh)" required>
+            </div>
+
+            <p id="msj-fee-energia">*EL FEE ENERGIA EN INDEXADO ES UN FEE UNICO, PONER SOLO EN LA CELDA DE P1</p>
+
+            <!-- Fee Potencia -->
+            <h2>Fee Potencia (€/kW Mes)</h2>
+            <div class="form-group">
+                <input type="number" id="feePotenciaP1" placeholder="P1 (€/kW Mes)" required>
+                <input type="number" id="feePotenciaP2" placeholder="P2 (€/kW Mes)" required>
+                <input type="number" id="feePotenciaP3" placeholder="P3 (€/kW Mes)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="feePotenciaP4" placeholder="P4 (€/kW Mes)" required>
+                <input type="number" id="feePotenciaP5" placeholder="P5 (€/kW Mes)" required>
+                <input type="number" id="feePotenciaP6" placeholder="P6 (€/kW Mes)" required>
+            </div>
+            <h3 id="PD"> *Los cálculos de precio y comisión mostrados, quedan sujetos a la verificación de datos en el momento de la contratación.</h3>
+            <!-- Botón Calcular -->
+            <button type="submit" id="calcularBtn">Calcular</button>
+        </form>
+
+        <!-- Resultado -->
+         
+        <h3 id="resultado">COMISIÓN: <span id="comisionResultado">0.00 €</span></h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

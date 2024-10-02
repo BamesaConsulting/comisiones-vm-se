@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto; /* Ajusta el margen para que se centre verticalmente */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo, .logo-vm {
+    max-width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+    height: auto;
+    max-height: 80px; /* Limita la altura de las imágenes */
+}
+
+h1 {
+    color: #3B7D23;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Permite que los campos se ajusten en pantallas pequeñas */
+}
+
+input[type="number"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 32%;
+    font-size: 14px;
+    margin-bottom: 10px; /* Añade margen inferior para evitar superposiciones */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3B7D23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #356b1e;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+#resultado {
+    margin-top: 20px;
+    background-color: #3B7D23;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#comisionResultado {
+    font-weight: bold;
+}
+
+#msj-fee-energia{
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:white;
+}
+
+
+
