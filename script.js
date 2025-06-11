@@ -98,11 +98,11 @@ document.getElementById('calcularBtn').addEventListener('click', function(event)
     }
 
     // Calcular los totales
-    let totalConsumoEnergia = (consumoEnergia.reduce((acumulador, currentValue) => acumulador + currentValue, 0)) * 0.6;
-    let totalComisionPotencia = (comisionPotencia.reduce((acumulador, currentValue) => acumulador + currentValue, 0)) * 0.6;
+    let totalConsumoEnergia = (consumoEnergia.reduce((acumulador, currentValue) => acumulador + currentValue, 0)) * 0.7;
+    let totalComisionPotencia = (comisionPotencia.reduce((acumulador, currentValue) => acumulador + currentValue, 0)) * 0.7;
 
     // Calcular la comisión final
-    let comisionFinal = (totalConsumoEnergia + totalComisionPotencia) * 0.70;
+    let comisionFinal = (totalConsumoEnergia + totalComisionPotencia) * 0.60;
 
     // Mostrar el resultado en el elemento HTML
     document.getElementById('comisionResultado').textContent = comisionFinal.toFixed(2) + " €";
